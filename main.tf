@@ -49,7 +49,6 @@ resource "azurerm_subnet_network_security_group_association" "nsga" {
 
 ########### LOAD BALANCER
 
-
 # Create a Public IP for the Load Balancer
 resource "azurerm_public_ip" "pip" {
   name                = "lb-pip"
