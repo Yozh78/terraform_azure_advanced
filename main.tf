@@ -70,7 +70,6 @@ resource "azurerm_lb" "lb" {
   }
 }
 
-
 # Create Backend Address Pool
 resource "azurerm_lb_backend_address_pool" "main" {
   loadbalancer_id = azurerm_lb.lb.id
@@ -163,7 +162,7 @@ resource "azurerm_monitor_autoscale_setting" "main" {
         time_window        = "PT5M"
         time_aggregation   = "Average"
         operator           = "GreaterThan"
-        threshold          = 75
+        threshold          = 50
       }
 
       scale_action {
